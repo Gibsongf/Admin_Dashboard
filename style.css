@@ -1,8 +1,10 @@
 * {
     margin: 0;
     padding: 0;
-    
   }
+body {
+    background-color: #DFE6EE;
+}
 .side-bar > h3 {
     font-size: 1.7rem;
     grid-column: 2;
@@ -21,8 +23,9 @@ ul {
 .container {
     height: 100%;
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 1fr 90px 4fr;
+    grid-template-columns: 1fr 3fr 1.4fr;
+    grid-template-rows: 1fr 70px 4fr;
+    column-gap: 15px;
     
 }
 .side-bar {
@@ -31,13 +34,13 @@ ul {
     grid-row: 1/5;
     font-weight: bold;
     color: white;
-    background-color: rgb(94, 162, 226);
+    background-color: #1B8ECC;
     /* padding-top: 30px; */
-    /* padding-left: 10px; */
+    padding-left: 10px; 
     padding-right: 50px; 
-    column-gap: 20px;
+    column-gap: 10px;
     display: grid;
-    grid-template-rows: 200px 20% ;     
+    grid-template-rows: 100px 20% ;     
     justify-items: center;
     justify-content: start;
     
@@ -48,7 +51,8 @@ ul {
     grid-row: 1;
     grid-column: 1;
     /* width: 60px; */
-    height: 70px;
+    height: 65px;
+    
 }
 .menu,.menu-icon {/* add img at the first column and this and dash to 2 */
     grid-column: 2;
@@ -66,6 +70,8 @@ ul {
 .menu-img{
     height: 40px;
     width: 50px;
+    
+    
 }
 
 .search-bar{
@@ -77,29 +83,73 @@ ul {
     grid-row: 6/8;
 }
 .card {
-    border: 3px solid red;
-    width: 1fr;
-    padding: 45px;
+    /* border: 3px solid red; */
+   /*  width: 350px; */
+    box-shadow: 2px 2px 1px #bebbbb;
+    border-left: 10px solid #E2AF31;
+    padding: 35px;
+    border-radius: 15px;
+    background-color: white;
+    display: grid;
+    gap: 10px;
+    
+    
 }
+.content-icon{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 15px;
+}
+.content-icon > svg {
+    width: 35px;
+}
+
 .projects-card{
     grid-column: 2/3;
     grid-row: 3/4;
-    border: 3px solid red;
+    /* border: 3px solid red; */
     display: grid;
+    gap: 30px;
     padding: 25px;
-    grid-template-columns: 1fr 1fr;
+    padding-left: 0;
+    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+}
+.card > p {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.card > h5 {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
 }
 #announ {
     grid-row: 2;
     grid-column: 3;
-    border: 3px solid rgb(7, 241, 66);
+    align-self: flex-end;
 }
 #myprojects {
     grid-row: 2;
     grid-column: 2;
-    border: 3px solid rgb(7, 241, 66);
+    align-self: flex-end;
 }
 .notice {
     grid-row: 3;
     grid-column: 3;
+}
+.announcements {
+    margin: 20px;
+    margin-left: 0;
+    padding: 40px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white;
+    box-shadow: 2px 2px 1px #bebbbb;
+}
+
+.announcements div {
+    margin: 10px;
+}
+.announcements p {
+    padding-top: 10px;
+    font-size: 0.8rem;
 }
